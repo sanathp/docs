@@ -2,8 +2,8 @@
   "$schema": "https://mintlify.com/schema.json",
   "name": "Wylto",
   "logo": {
-    "dark": "/logo/dark.svg",
-    "light": "/logo/light.svg"
+    "dark": "/logo/logo.avif",
+    "light": "/logo/logo.avif"
   },
   "favicon": "/favicon.svg",
   "colors": {
