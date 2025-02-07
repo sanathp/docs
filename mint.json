@@ -22,8 +22,8 @@
     }
   ],
   "topbarCtaButton": {
-    "name": "Dashboar",
-    "url": "https://app.wyltop.com"
+    "name": "Dashboard",
+    "url": "https://app.wylto.com"
   },
   "tabs": [
     {
@@ -42,7 +42,7 @@
     {
       "group": "Get Started",
       "pages": [
-        "introduction",
+        "introduction"
       ]
     },
     {
