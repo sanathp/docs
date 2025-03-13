@@ -1,0 +1,162 @@
+---
+title: "Word Press Form integration"
+description: "Here are two methods to integrate your WordPress Contact Form 7 (CF7) form with the webhook."
+---
+
+**Method 1: Using functions.php (Recommended for Developers)**
+
+This method sends form data to the webhook whenever the form is submitted.
+
+### **Steps:**
+
+1. Go to **WordPress Dashboard** → **Appearance** → **Theme File Editor**.
+
+2. Open the **functions.php** file.
+
+3. Copy and paste the following code at the bottom:
+
+php
+
+CopyEdit
+
+`add_action('wpcf7_mail_sent', 'send_cf7_data_to_webhook'`);
+
+`function send_cf7_data_to_webhook($contact_form`) \{
+`    $submission = WPCF7_Submission::get_instance`();
+`    if (!$submission`) \{
+`        return`;
+&#x20;   }
+
+`    $data = $submission->get_posted_data`();
+
+`    // Prepare the payload`
+`    $payload = json_encode`(\[
+`        'name' => sanitize_text_field($data['your-name'`]), &#x20;
+`        'phoneNumber' => sanitize_text_field($data['your-phone'`]), &#x20;
+`        'email' => sanitize_email($data['your-email'`]), &#x20;
+`        'projectId' => sanitize_text_field($data['your-project'`]), &#x20;
+`        'message' => sanitize_textarea_field($data['your-message'`]) &#x20;
+&#x20;   ]);
+
+`    // Webhook URL`
+`    $url = "https://server.wylto.com/integration/webhook/H3qhsWmrHfTjc5cwjRWs"`;
+
+`    // Arguments for wp_remote_post`
+`    $args` = \[
+`        'body' => $payload`,
+`        'headers' => ['Content-Type' => 'application/json'`],
+`        'method' => 'POST'`
+&#x20;   ];
+
+`    // Send data to the webhook`
+`    wp_remote_post($url, $args`);
+}
+
+
+### **How It Works**
+
+* This code **captures form submissions** and sends them as a **JSON payload** to your webhook.
+
+* You need to **replace** field names (`your-name`, `your-phone`, etc.) with the actual names from your CF7 form.
+
+* Save and test your form.
+
+***
+
+## **Method 2: Using the "CF7 to Webhook" Plugin (No Coding)**
+
+If you prefer a plugin-based method, follow these steps:
+
+### **Steps:**
+
+1. **Install "CF7 to Webhook" Plugin**
+
+   * Go to **WordPress Dashboard** → **Plugins** → **Add New**.
+
+   * Search for **"CF7 to Webhook"**, install, and activate it.
+
+2. **Set Up the Webhook**
+
+   * Navigate to **Contact** → **Webhook**.
+
+   * Click on the CF7 form you want to integrate.
+
+   * In the **Webhook URL**, enter:
+
+
+
+
+     ruby
+
+
+
+
+     CopyEdit
+
+
+
+
+     [`https://server.wylto.com/integration/webhook/H3qhsWmrHfTjc5cwjRWs`](https://server.wylto.com/integration/webhook/H3qhsWmrHfTjc5cwjRWs)
+
+
+
+
+   * Set the **Request Method** to `POST`.
+
+3. **Map the Form Fields**
+
+   * Add the fields manually as key-value pairs:
+
+
+
+
+     ini
+
+
+
+
+     CopyEdit
+
+
+
+
+     `name` = \[your-name]
+
+
+
+
+     `phoneNumber` = \[your-phone]
+
+
+
+
+     `email` = \[your-email]
+
+
+
+
+     `projectId` = \[your-project]
+
+
+
+
+     `message` = \[your-message]
+
+
+
+
+   * Save the settings.
+
+### **How It Works**
+
+* The plugin automatically sends form data to the webhook after submission.
+
+* No coding is required.
+
+***
+
+## **Which Method to Choose?**
+
+* ✅ **If you're comfortable with coding → Use Method 1** (More control, no extra plugins).
+
+* ✅ **If you want a quick, no-code solution → Use Method 2** (Easier for beginners).
