@@ -3,9 +3,15 @@ title: "Chatbot Blocks – Features & Descriptions"
 description: "The chatbot consists of various functional blocks that help automate interactions, collect user inputs, process data, and enhance user engagement. Below is a detailed description of each block and its functionality."
 ---
 
-***
+o
 
-<img height="608" width="602" src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdAOB1_5Gma5J09lI8MGN3VfIzOqf4zuO7tbAOy3w-aDqwHzUHLG_a4ocE9a3RQ7pHWzrhxU1wreknxdcD_CKiJl3mYjSSOBMZlERfReSCp0GIr-VzGVnVsZG2d9UTiwlHfuHxXjA?key=UH5SamcrVlnTVKXp2ALp1OoW" />
+---
+
+<img
+  height="608"
+  width="602"
+  src="https://lh7-rt.googleusercontent.com/docsz/AD_4nXdAOB1_5Gma5J09lI8MGN3VfIzOqf4zuO7tbAOy3w-aDqwHzUHLG_a4ocE9a3RQ7pHWzrhxU1wreknxdcD_CKiJl3mYjSSOBMZlERfReSCp0GIr-VzGVnVsZG2d9UTiwlHfuHxXjA?key=UH5SamcrVlnTVKXp2ALp1OoW"
+/>
 
 ### **1. Send a Message**
 
@@ -13,29 +19,22 @@ The **Send a Message** block allows the chatbot to send predefined messages to u
 
 **Use this block to send:**
 
-* **Text messages**
-
-* **Images** (Max 5 MB)
-
-* **Videos** (Max 16 MB)
-
-* **Documents**
-
-* **Buttons** (Up to 3)
-
-* **Lists** (Up to 10)
-
-* **CTA URLs** (For links like website or landing pages)
-
-* **Location** (e.g., office, store, or project location)
+- **Text messages**
+- **Images** (Max 5 MB)
+- **Videos** (Max 16 MB)
+- **Documents**
+- **Buttons** (Up to 3)
+- **Lists** (Up to 10)
+- **CTA URLs** (For links like website or landing pages)
+- **Location** (e.g., office, store, or project location)
 
 💡 **Pro Tip:** Use `{{$name}}` to insert dynamic variables. Example: `{{$name}}` will automatically fetch the user's name saved in WhatsApp.
 
 📌 **Example:**
 A customer chatbot can send an automated response like:
-*"Thank you for your feedback! We will get back to you shortly."*
+_"Thank you for your feedback\! We will get back to you shortly."_
 
-***
+---
 
 ### **2. Ask a Question**
 
@@ -43,16 +42,15 @@ The **Ask a Question** block prompts users for responses, helping the chatbot co
 
 **Use this block to:**
 
-* Ask open-ended questions and save responses to variables
-
-* Collect specific data types (e.g., email, phone number)
+- Ask open-ended questions and save responses to variables
+- Collect specific data types (e.g., email, phone number)
 
 💡 **Pro Tip:** Use `{{variable-name}}` to insert captured data in other blocks. Example: `{{answer}}`.
 
 📌 **Example:**
-*"What is your preferred payment method?"* – The bot stores the user’s response and triggers different follow-up actions based on their selection.
+_"What is your preferred payment method?"_ – The bot stores the user’s response and triggers different follow-up actions based on their selection.
 
-***
+---
 
 ### **3. Connect to Flow**
 
@@ -60,43 +58,33 @@ The **Connect to Flow** block links different chatbot flows, allowing a structur
 
 **Use this block to:**
 
-* Connect the current flow to another flow
+- Connect the current flow to another flow
+- Reuse common conversation patterns
+- Break down complex interactions into smaller flows
 
-* Reuse common conversation patterns
-
-* Break down complex interactions into smaller flows
-
-***
+---
 
 ### **4. Update Contact**
-
-
 
 The **Update Contact** block helps modify key attributes of a contact within the Wylto system, enabling better segmentation and workflow automation.
 
 **Use this block to:**
 
-* Update **status** when a contact's progress changes
-
-* Assign or remove **tags** to trigger specific actions
-
-* Add or update **groups** for targeted messaging
-
-* Assign contacts to a **team member** for follow-ups
-
-* Set or modify an **event date** for scheduling and reminders
+- Update **status** when a contact's progress changes
+- Assign or remove **tags** to trigger specific actions
+- Add or update **groups** for targeted messaging
+- Assign contacts to a **team member** for follow-ups
+- Set or modify an **event date** for scheduling and reminders
 
 **Use Cases:**
 
-* **Automated Notifications:** Send instant notifications when a **tag or status is changed or added**.
-
-* **Event Reminders:** Capture event details and reuse them to send timely reminders.
-
-* **Personalized Engagement:** Dynamically segment users and trigger relevant workflows.
+- **Automated Notifications:** Send instant notifications when a **tag or status is changed or added**.
+- **Event Reminders:** Capture event details and reuse them to send timely reminders.
+- **Personalized Engagement:** Dynamically segment users and trigger relevant workflows.
 
 By updating these attributes based on user interactions, this block enables automation for lead management, customer segmentation, and proactive engagement.
 
-***
+---
 
 ### **5. Remove Tag**
 
@@ -104,14 +92,13 @@ The **Remove Tag** block removes assigned tags, refining user segmentation based
 
 **Use this block to:**
 
-* Remove specific tags from a contact
-
-* Update or refine customer segmentation
+- Remove specific tags from a contact
+- Update or refine customer segmentation
 
 📌 **Example:**
 A user who no longer wishes to receive promotional updates can have their “Marketing” tag removed.
 
-***
+---
 
 ### **6. Send Catalog**
 
@@ -119,17 +106,14 @@ The **Send Catalog** block allows the chatbot to share a **WhatsApp Catalog** wi
 
 **Use this block to:**
 
-* Share a **WhatsApp Catalog** of products or services
-
-* Enable users to browse items with images, descriptions, and prices
-
-* Allow users to add products to their cart and make direct purchases
-
-* Enhance the shopping experience without leaving WhatsApp
+- Share a **WhatsApp Catalog** of products or services
+- Enable users to browse items with images, descriptions, and prices
+- Allow users to add products to their cart and make direct purchases
+- Enhance the shopping experience without leaving WhatsApp
 
 🔹 **Note:** Ensure the catalog is properly set up and linked in **WhatsApp Business Manager** to use this feature seamlessly.
 
-***
+---
 
 ### **7. WhatsApp Flows**
 
@@ -137,15 +121,12 @@ The **WhatsApp Flow** block enables businesses to present **structured forms** w
 
 **Use this block to:**
 
-* Send **WhatsApp Flows** to customers for data collection
+- Send **WhatsApp Flows** to customers for data collection
+- Create **appointment booking forms** for scheduling meetings or services
+- Gather customer information in a structured format
+- Streamline order processing, surveys, and feedback collection
 
-* Create **appointment booking forms** for scheduling meetings or services
-
-* Gather customer information in a structured format
-
-* Streamline order processing, surveys, and feedback collection
-
-***
+---
 
 ### **8. Delay**
 
@@ -153,9 +134,9 @@ The **Delay** block introduces a pause between messages, creating a natural conv
 
 **Use this block to:**
 
-* Add time delays between messages for a more human-like interaction
+- Add time delays between messages for a more human-like interaction
 
-***
+---
 
 ### **9. Condition**
 
@@ -163,18 +144,15 @@ The **Condition** block sets up logic-based decisions to determine chatbot respo
 
 **Use this block to:**
 
-* Create branching logic based on:
-
-  * User responses
-
-  * Contact properties
-
-  * Custom variables
+- Create branching logic based on:
+  - User responses
+  - Contact properties
+  - Custom variables
 
 📌 **Example:**
 If a user selects "Express Delivery," the bot can trigger a different response than for "Standard Delivery."
 
-***
+---
 
 ### **10. List Orders**
 
@@ -182,16 +160,14 @@ The **List Orders** block enables the bot to display order-related details to us
 
 **Use this block to:**
 
-* Show order history
-
-* Display order status
-
-* List order details
+- Show order history
+- Display order status
+- List order details
 
 📌 **Example:**
-*"Your order #12345 has been shipped and will be delivered by tomorrow."*
+_"Your order #12345 has been shipped and will be delivered by tomorrow."_
 
-***
+---
 
 ### **11. HTTP Request**
 
@@ -199,13 +175,11 @@ The **HTTP Request** block allows the chatbot to communicate with external servi
 
 **Use this block to:**
 
-* Retrieve data from an external service
+- Retrieve data from an external service
+- Push collected data to an external database
+- Trigger external actions based on user input
 
-* Push collected data to an external database
-
-* Trigger external actions based on user input
-
-***
+---
 
 ### **12. Start Live Chat**
 
@@ -213,14 +187,13 @@ The **Start Live Chat** block connects users with a human agent for real-time as
 
 **Use this block to:**
 
-* Transfer conversations from bot to human agent
-
-* Provide personal support and issue resolution
+- Transfer conversations from bot to human agent
+- Provide personal support and issue resolution
 
 📌 **Example:**
 A user having trouble with a transaction can be redirected to a human support agent.
 
-***
+---
 
 ### **13. (Coming Soon) Add to Google Sheet**
 
@@ -228,8 +201,7 @@ The **Add to Google Sheet** block records chatbot-collected data into a Google S
 
 **Use this block to:**
 
-* Record user responses
+- Record user responses
+- Store form submissions automatically
 
-* Store form submissions automatically
-
-***
+---
